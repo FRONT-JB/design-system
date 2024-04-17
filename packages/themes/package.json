@@ -12,8 +12,9 @@
     }
   },
   "scripts": {
-    "build": "npm run build:js && npm run build:type",
+    "build": "npm run clean && npm run build:js && npm run build:type && npm run build:css",
     "build:js": "node build.js",
+    "build:css": "node ./scripts/build-css-module.js",
     "build:type": "tsc --emitDeclarationOnly",
     "clean": "rm -rf dist"
   },
